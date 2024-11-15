@@ -49,7 +49,10 @@ const Login = () => {
             errorMessage={errors?.password?.message}
           />
           <Spacing />
-          <Button title="Entrar" />
+          <Button
+            title="Entrar"
+            disabled={!isValid}  // Desabilita o botão quando o formulário não é válido
+          />
         </Column>
       </LoginContainer>
     </Container>
